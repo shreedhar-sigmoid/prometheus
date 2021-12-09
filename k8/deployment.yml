@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-web
+  labels:
+    app: python-app
+spec:
+  replicas: 1
+  selector: 
+    matchLabels: 
+       app: python-app
+  template:
+    metadata:
+      name: python-web-demo
+      labels:
+        app: python-app
+    spec:
+      containers:
+        - name: python-web-demo
+          image: rpshreedhar/prom-assignment:f1
+        
