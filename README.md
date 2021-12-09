@@ -21,6 +21,7 @@
           -> kubectl create -f deployment -f service.yml 
   
    run minikube tunnnel(keep it run) if are you using minikube then get external IP to access the app
+   
           -> minikube tunnel
           -> kubectl get svc
   
