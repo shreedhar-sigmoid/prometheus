@@ -9,32 +9,32 @@
     
   # Solution
  
-Build docker image
+   Build docker image
    # Path "prometheus/build"
    
-   -> docker-compose build
+           -> docker-compose build
      tag the image and push to your docker repo or you can use my image in the rpshreedhar/prom-assigment:f1
      if you build your own image then you have to change docker image K8 deployment.yml file 
    
-Run deplyment.yml and service.yml file 
+   Run deplyment.yml and service.yml file 
    # path "prometheus/k8"
-  -> kubectl create -f deployment -f service.yml 
+          -> kubectl create -f deployment -f service.yml 
   
-     run minikube tunnnel(keep it run) if are you using minikube then get external IP to access the app
-  -> minikube tunnel
-  -> kubectl get svc
+   run minikube tunnnel(keep it run) if are you using minikube then get external IP to access the app
+          -> minikube tunnel
+          -> kubectl get svc
   
       access the  application at External_IP:9011
       access the  application at External_IP:8011
 
-Run the Prometheus and grafana
+   Run the Prometheus and grafana
 
      replace the target of web-app ip address with external IP and port  in prometheus.yml file
    # path "prometheus/config"
    
      run docker-compose file 
    # path "prometheus"
-      -> docker-compose up 
+         -> docker-compose up 
       
       access the  prometheus at localhost:9090
       access the  prometheus at localhost:3000
